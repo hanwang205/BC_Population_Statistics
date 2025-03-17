@@ -1,65 +1,105 @@
-# BC-Population-Statistics
-
 ---
 title: "BC Population Statistics Dashboard"
 output: github_document
 ---
 
-## Motivation
+## 📊 **For Dashboard Users**
 
-**Target Audience:** Data analysts, policymakers, and anyone interested in the demographic statistics of British Columbia (BC).
+### Motivation & Problem Solving
 
-This app helps users explore the population statistics of BC, including trends over time for total population, life expectancy, median age, and dependency types. It enables users to filter data based on the year range, median age, and selected variables like life expectancy and fertility rates. The aim is to provide a tool for visualizing key population trends that can assist in policymaking, research, and strategic planning for the province's future.
+Population growth and demographic trends are crucial for shaping policies that address the future needs of British Columbia (BC). The **BC Population Statistics Dashboard** helps policymakers, researchers, and the public explore the province's demographic trends, including population size, life expectancy, median age, and dependency types. By visualizing this data, the dashboard helps identify key areas for policy action related to social services, health, and urban planning.
 
-------------------------------------------------------------------------
+With this dashboard, you can explore:
 
-## App Description
+- **Population Trends Over Time**: See how BC's total population has changed across the years.
+- **Life Expectancy vs. Median Age**: Analyze how the life expectancy at birth compares with median age trends.
+- **Dependency Trends**: Visualize the trends in child and elderly dependency percentages over time, helping to understand the aging population and the strain on social services.
+  
+The dashboard features:
 
-This dashboard provides a range of interactive visualizations to explore the demographic trends of British Columbia. It includes:
+- **Total Population Over Time**: A line chart displaying the total population of BC over the years. The chart allows users to explore growth patterns.
+  
+- **Scatter Plot (Life Expectancy vs. Median Age)**: A scatter plot that shows the relationship between median age and life expectancy, helping to analyze how aging populations impact life expectancy in BC.
+  
+- **Dependency Trends Over Time**: A stacked bar chart showing the child and elderly dependency ratios over the years. This feature highlights the potential for future demographic shifts.
+  
+- **Multiple Year Comparison**: Allows users to compare demographic trends across multiple years for a more granular view of population changes.
 
--   **Population Trends Over Time:** A line plot of the total population over the years.
--   **Scatter Plot:** A scatter plot showing the relationship between median age and selected variables like life expectancy and fertility rates.
--   **Dependency Trends:** A bar chart visualizing the trends of child and elderly dependency over time.
--   **Top 10 Years by Total Population:** A card displaying the top 10 years based on the total population in BC.
+**[View the live dashboard here](https://your-deployed-link.com)**
 
-The app allows users to filter data based on the year, median age, and other parameters to help them better understand the trends and relationships in the data.
+To get an idea of how the dashboard looks and functions, here’s a short demo of the app in action:  
+![Demo GIF](img/demo.gif)
 
-[Here you can provide a link to a video demo or embed it directly if possible.]
+### Need Help?
 
-------------------------------------------------------------------------
+If you encounter any issues or have questions, please feel free to open an issue in the GitHub repository. We’re happy to assist!
 
-## Installation Instructions
+---
 
-### 1. Install Conda
+## 🛠️ **For Developers and Contributors**
 
-If you don't have Conda installed, download and install Anaconda from [here](https://www.anaconda.com/products/individual).
+Thank you for considering contributing to the **BC Population Statistics Dashboard**! We welcome contributions to improve the project, whether it’s adding new features, fixing bugs, or improving documentation. Below is a guide to help you get started.
 
-### 2. Create a Conda Environment
+### Prerequisites
 
-Clone this repository and navigate to the project directory in your terminal. Then run the following command to create a Conda environment using the provided `environment.yml`:
+To run the app locally, you need to set up your environment with the required dependencies.
 
-```bash conda env create -f environment.yml
+### Environment Setup
 
-### 3. Activate the Conda Environment
+1. Clone the repository:
 
-After the environment is created, activate it by running:
+    ```bash
+    git clone https://github.com/hanwang205/BC_Population_Statistics.git
+    ```
 
-```bash conda activate bc_population_dashboard
+2. Navigate to the project directory:
 
-### 4. Open the App in RStudio
+    ```bash
+    cd BC_Population_Statistics
+    ```
 
-Once your environment is set up, open the project in RStudio and run the app:
+3. Create an environment using `renv` (for R packages):
 
-Open the terminal in RStudio (Tools -\> Terminal -\> New Terminal). Make sure the environment is activated in the terminal. Run the following R code in the Console to launch the app: r Copy shiny::runApp("https://github.com/hanwang205/BC_Population_Statistics.git") The app should now be accessible in your web browser.
+    ```bash
+    renv::restore()
+    ```
 
-##App Features 
-Year Slicer: Filter the data by year to analyze trends within specific periods. 
-Multiple Year Slicer: Allows the user to select multiple years for comparison. 
-Median Age Slider: Dynamically filter data based on a range of median ages. 
-Scatter Plot: Select variables such as Life Expectancy or Total Fertility Rate for comparison with Median Age. 
-Dependency Trends: Analyze child and elderly dependency as a percentage of total dependency over time. 
-Top 10 Years by Total Population: View the top 10 years based on total population in BC.
+4. Activate the environment:
 
-## Data Source
+    ```bash
+    renv::activate()
+    ```
 
-The data for this dashboard is sourced from the BC Population Projections dataset. You can access the dataset at this link : <https://catalogue.data.gov.bc.ca/dataset/bc-population-projections>
+### Running the Dashboard Locally
+
+1. After activating the environment, run the app in RStudio by executing:
+
+    ```r
+    shiny::runApp()
+    ```
+
+2. The app will open in your default web browser.
+
+
+### Issues & Pull Requests
+
+If you encounter any issues while using the dashboard or have an idea for a new feature, feel free to open an issue or submit a pull request. Please follow the contributing guidelines and provide relevant information.
+
+---
+
+## 📄 **License**
+
+The BC Population Statistics Dashboard is licensed under the MIT license. See the LICENSE file for more details.
+
+---
+
+## 👨‍💻 **Contributors**
+
+- Han Wang
+
+---
+
+## 🔗 **References**
+
+Data source: **BC Population Projections Dataset**  
+Access the dataset [here](https://catalogue.data.gov.bc.ca/dataset/bc-population-projections).
