@@ -1,7 +1,4 @@
----
-title: "BC Population Statistics Dashboard"
-output: github_document
----
+#BC Population Statistics Dashboard"
 
 ## 📊 **For Dashboard Users**
 
