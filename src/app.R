@@ -58,7 +58,7 @@ ui <- dashboardPage(
     ),
     fluidRow(
       # Box for the area plot (Cumulative Dependency Trend)
-      box(title = "Dependency Trends Over Time", plotOutput("area_plot", height = 300)) 
+      box(title = "Dependency Trends Over Time", plotOutput("area_plot", height = 350),width = 12) 
     )
   )
 )
@@ -75,6 +75,14 @@ server <- function(input, output) {
     }
   })
   
+  # Reactive expression to handle multiple year selection
+  filtered_data_multi <- reactive({
+    if (length(input$Year_multi) > 0) {
+      df %>% filter(Year %in% input$Year_multi)  # Filter by multiple years
+    } else {
+      df  # If no years are selected, return the full dataset
+    }
+  })
   # Output for a plot of selected data (Total Population Over Year - Line Chart)
   output$plot1 <- renderPlot({
     ggplot(filtered_data(), aes(x = Year, y = `Total population`)) +  # Use the Total population column

@@ -37,7 +37,12 @@ get_area_plot <- function(df, dependency_column) {
     ggtitle("Cumulative Dependency Trends Over Time") +
     xlab("Year") + ylab("Dependency (%)") +
     theme_minimal() +
-    scale_fill_manual(values = c("red", "purple")) +
+    scale_fill_manual(
+      values = c(
+        "Child Dependency" = "#c3860d", 
+        "Elderly Dependency" = "#c42e2e"
+      )
+    ) +
     theme(legend.position = "top") +
     scale_y_continuous(labels = scales::percent_format(scale = 1)) # Format y-axis as percentage
   
