@@ -22,8 +22,9 @@ The dashboard features:
   
 - **Multiple Year Comparison**: Allows users to compare demographic trends across multiple years for a more granular view of population changes.
 
-To get an idea of how the dashboard looks and functions, here’s a short demo of the app in action:  
-![Demo GIF](img/demo.mp4)
+A short walkthrough video of the app is available to demonstrate its full functionality.
+
+### [Watch the Video Walkthrough](img/demo.mp4)
 
 ### Need Help?
 
