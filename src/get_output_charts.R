@@ -39,8 +39,8 @@ get_area_plot <- function(df, dependency_column) {
     theme_minimal() +
     scale_fill_manual(
       values = c(
-        "Child Dependency" = "#c3860d", 
-        "Elderly Dependency" = "#c42e2e"
+        "Child Dependency" = "red", 
+        "Elderly Dependency" = "purple"
       )
     ) +
     theme(legend.position = "top") +
