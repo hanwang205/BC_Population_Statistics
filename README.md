@@ -22,10 +22,8 @@ The dashboard features:
   
 - **Multiple Year Comparison**: Allows users to compare demographic trends across multiple years for a more granular view of population changes.
 
-**[View the live dashboard here](https://your-deployed-link.com)**
-
 To get an idea of how the dashboard looks and functions, here’s a short demo of the app in action:  
-![Demo GIF](img/demo.gif)
+![Demo GIF](img/demo.mp4)
 
 ### Need Help?
 
